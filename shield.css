@@ -1,0 +1,557 @@
+  /* INDEX */
+  
+  /*  
+
+  blinkbgbw
+  blinkbgcolor
+  blinkbgred
+  blinkbgblue
+  blinkbgorange
+
+  blinkimgcolor
+
+  slowblur
+  slowbw
+  slownegative
+  slowfade
+
+  blinktxtbw
+  blinktxtcolor
+  txtfam
+  txtsize
+  txtstyle
+
+  rotate
+  moveright
+  moveleft
+  movetop
+  movebottom
+
+  */
+  
+  /* BACKGROUNDS */
+
+
+  .gradbgblue{
+    animation-name: gradblue;
+    background: linear-gradient(rgb(255, 255, 255), lightblue, darkblue, rgb(0, 0, 80), rgb(0, 2, 5));
+    background-size: 100% 4000%;
+    animation-duration: 3000s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+
+  
+}
+@keyframes gradblue {
+	0% {
+		background-position: 0% 0%;
+	}
+	50% {
+		background-position: 0% 200%;
+	}
+	100% {
+		background-position: 0% 400%;
+	}
+}
+
+
+.blinkbgbw{
+    animation-name: bgbw;
+  animation-duration: 0.15s;
+  animation-iteration-count: infinite;
+}
+@keyframes bgbw {
+    from {background-color: black; color: white}
+    to {background-color: white; color: black}
+    
+  }
+
+  .blinkbgcolor{
+    animation-name: bgcolor;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes bgcolor {
+    0% {background-color:  #ec0000; color: #eaf4ff}
+    20% {background-color: #4b88ca; color: #167BBF}
+    40% {background-color: #6e7e90; color: #f56100}
+    60% {background-color: #f56100; color: #6e7e90}
+    80% {background-color: #167BBF; color: #4b88ca}
+    100% {background-color:#eaf4ff; color: #ec0000}
+  }
+
+  .blinkbgred{
+    animation-name: bgred;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bgred {
+    from {background-color:  #ec0000; color: white}
+    to {background-color: white; color:  #ec0000}
+    
+  }
+
+  .blinkbgblue{
+    animation-name: bgblue;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bgblue {
+    from {background-color:  #4b88ca; color: white}
+    to {background-color: white; color:  #4b88ca}
+    
+  }
+
+  .blinkbgorange{
+    animation-name: bgorange;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bgorange {
+    from {background-color:  #f56100; color: white}
+    to {background-color: white; color:  #f56100}
+    
+  }
+
+  .blinkbgpink{
+    animation-name: bgpink;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes bgpink {
+    from {background-color:  rgb(255, 82, 111); color: white}
+    to {background-color: white; color:  rgb(255, 82, 111)}
+    
+  }
+
+
+      /* IMGs */
+
+  .blinkimgcolor{
+    animation-name: imgcolor;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes imgcolor {
+    from {filter: hue-rotate(0deg);}
+    to {filter: hue-rotate(359deg);}
+    
+  }
+
+  .picblock {
+    overflow: hidden;
+    height: 269px;
+    width: 473px;
+    margin-bottom: 0px;
+  }
+
+
+  .andromeda {
+    animation-name: andromeda;
+    animation-duration: 180s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+  }
+
+  
+
+  @keyframes andromeda {
+    from {
+      transform: rotate(0deg) scale(1); 
+    }
+    to {
+      transform: rotate(29deg) scale(3); 
+    }
+  }
+  
+
+    /* SLOWs */
+
+  .slowblur{
+    animation-name: slowblur;
+  animation-duration: 60s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes slowblur {
+    from {filter: blur(0px);}
+    to {filter: blur(10px);}
+    
+  }
+
+  .slowbw{
+    animation-name: slowbw;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+  animation-direction:normal;
+  animation-fill-mode: forwards;
+}
+@keyframes slowbw {
+    from {filter: saturate(100%);}
+    to {filter: saturate(0%);}
+    
+  }
+
+  .slownegative{
+    animation-name: slowneg;
+  animation-duration: 60s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes slowneg {
+    from {filter: invert(0%);}
+    to {filter: invert(100%);}
+    
+  }
+
+  .slowfade{
+    animation-name: slowfade;
+  animation-duration: 20s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes slowfade {
+    0% {filter: opacity(1) saturate(0%)}
+    100% {filter: opacity(0) saturate(0%)}
+   /* 100% {filter: opacity(100%);}
+     50% {filter: opacity(1) saturate(0%)}*/
+    
+  }
+
+  /* SCROLL TEXT */
+
+.outer {
+    overflow: hidden;
+    overflow-y: hidden;
+    height: 50px;
+    
+}
+
+.outer div {
+    display: inline-block;
+    overflow-y: hidden;
+    margin-bottom: 40px;
+    
+}
+
+.content {
+  color: #000;
+  font-size: 16px;
+    font-weight: 500;
+  line-height: 48px;
+  
+  overflow-y: hidden;
+}
+
+.loop {
+ 
+    animation: loop-anim 3s linear infinite;
+}
+
+@keyframes loop-anim {
+    0% {
+        margin-left: 2000;
+    }
+    100% {
+        margin-left: -50% /* This works because of the div between "outer" and "loop" */
+    }
+}
+
+ /* BLINK TEXT */
+
+ .outerbk {
+  overflow: hidden;
+  overflow-y: hidden;
+  height: 220px;
+  width: 470px;
+
+}
+
+.outerbk div {
+  display: inline-block;
+  overflow-y: hidden;
+  margin-bottom: 40px;
+
+  
+}
+
+.contentbk {
+color: #000;
+font-size: 32px;
+  font-weight: 500;
+line-height: 48px;
+text-align-last: justify;
+
+overflow-y: hidden;
+
+}
+
+.loopbk {
+
+  animation: loop-animbk 3s linear infinite;
+
+  
+}
+
+@keyframes loop-animbk {
+  0% {
+      margin-left: 2000;
+       color: white
+  }
+  10% {color: black}
+  20% {color: white}
+  30% { color: black}
+  40% {color: white}
+    50% {color: black}
+    60% {color: white}
+    70% { color: black}
+    80% {color: white}
+    90% {color: black}
+
+  100% {
+      margin-left: -50%; /* This works because of the div between "outer" and "loop" */
+       color: white
+  }
+}
+
+.loopcl {
+
+  animation: loop-animcl 3s linear infinite;
+
+}
+
+@keyframes loop-animcl {
+  0% {
+      margin-left: 2000;
+       color: #4b88ca
+  }
+  10% {color: #167BBF}
+  20% {color: #6e7e90}
+  30% { color: #f56100}
+  40% {color:  #6e7e90}
+    50% {color: #167BBF}
+    60% {color: #f56100}
+    70% { color: #4b88ca}
+    80% {color: #eaf4ff}
+    90% {color: #ec0000}
+
+  100% {
+      margin-left: -50%; /* This works because of the div between "outer" and "loop" */
+       color: white
+  }
+}
+
+.sky{
+  margin-left: -308px;
+}
+
+  /* TEXT */
+
+  .texttransp{
+    animation-name: texttransp;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+  
+  
+  }
+  @keyframes texttransp {
+  0% {
+    opacity: 100%;
+  }
+  100% {
+    opacity: 0%;
+  }
+  }
+
+  .blinktxtcolor{
+    animation-name: txtcolor;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes txtcolor {
+    0% {color: #eaf4ff}
+    20% {color: #167BBF}
+    40% {color: #f56100}
+    60% {color: #6e7e90}
+    80% {color: #4b88ca}
+    100% {color: #ec0000}
+  }
+
+  .blinktxtbw{
+    animation-name: txtbw;
+  animation-duration: 0.2s;
+  animation-iteration-count: infinite;
+}
+@keyframes txtbw {
+    0% {color: black}
+    
+    100% {color: white}
+  }
+
+  .txtfam{
+    animation-name: txtfam;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+}
+@keyframes txtfam {
+    0% {font-family: 'Courier New', Courier, monospace;}
+    20% {font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+    40% {font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+    60% {font-family: 'Comic Sans MS';}
+    80% {font-family: cursive;}
+    100% {font-family: fantasy;}
+  }
+
+
+  .txtsize{
+    animation-name: txtsize;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes txtsize {
+    0% {font-size: smaller;}
+    20% {font-size: xx-large;}
+    40% {font-size: medium;}
+    60% {font-size: x-large;}
+    80% {font-size: xx-small;}
+    100% {font-size: large;}
+  }
+
+  .txtstyle{
+    animation-name: txtstyle;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+@keyframes txtstyle {
+    0% {font-weight: bolder;}
+    20% {font-variant: small-caps;}
+    40% {font-style: italic;}
+    60% {font-synthesis: weight;}
+    80% {font-variant: small-caps;}
+    100% {font-style: italic;}
+  }
+
+  .txtcrazy{
+    animation-name: txtcrazy;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+@keyframes txtcrazy {
+    0% {font-weight: bolder;font-size: smaller;font-family: 'Courier New', Courier, monospace;}
+    20% {font-variant: small-caps;font-size: medium;font-family: cursive;}
+    40% {font-style: italic;font-size: large;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+    60% {font-synthesis: weight;font-size: xx-small;font-family: fantasy;}
+    80% {font-variant: small-caps;font-size: xx-large;font-family: 'Comic Sans MS';}
+    100% {font-style: italic;font-size: x-large;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;}
+  }
+
+
+  .txtbgblue{
+    background-color: #4b88ca;
+  }
+
+  .txtbgorange{
+    background-color: #f56100;
+  }
+  
+  .txtbgblack{
+    background-color: #000000;
+  }
+
+    /* MOVEMENT */
+
+  .rotate {
+    animation: rotation 2s infinite linear;
+  }
+
+  @keyframes rotation { 
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  
+
+
+  .moveright{
+    animation-name: moveright;
+  animation-duration: 5s;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+@keyframes moveright {
+    0% {left: 0px;}
+    100% {left: 2000px;}
+  }
+
+  .moveleft{
+    animation-name: moveleft;
+  animation-duration: 5s;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+@keyframes moveleft{
+    0% {right: 0px;}
+    100% {right: 2000px;}
+  }
+
+  .movebottom{
+    animation-name: movebot;
+  animation-duration: 5s;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+@keyframes movebot{
+    0% {top: 0px;}
+    100% {top: 2000px;}
+  }
+
+  .movetop{
+    animation-name: movetop;
+  animation-duration: 5s;
+  position: relative;
+  animation-fill-mode: forwards;
+}
+@keyframes movetop{
+    0% {bottom: 0px;}
+    100% {bottom: 2000px;}
+  }
+
+  .moveboat{
+    animation-name: moveboat;
+  animation-duration: 35s;
+  position: relative;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+
+}
+@keyframes moveboat{
+    0% {bottom: 0px; letter-spacing: 0px; transform: rotate(0deg); right: 0px;}
+    10% {bottom: 50px; letter-spacing: -3px; transform: rotate(25deg); right: 10px;}
+    15% {bottom: 100px; letter-spacing: 0px; transform: rotate(15deg); right: -10px;}
+    20% {bottom: 150px; letter-spacing: 5px; transform: rotate(-15deg); right: 10px;}
+    25% {bottom: 200px; letter-spacing: 0px; transform: rotate(-25deg); right: -10px;}
+    30% {bottom: 250px; letter-spacing: -5px; transform: rotate(15deg); right: 10px;}
+    35% {bottom: 300px; letter-spacing: 5px; transform: rotate(25deg); right: -10px;}
+    40% {bottom: 350px; letter-spacing: 20px; transform: rotate(-15deg); right: 10px;}
+    45% {bottom: 400px; letter-spacing: 10px; transform: rotate(-25deg); right: -10px;}
+    50% {bottom: 450px; letter-spacing: -10px; transform: rotate(15deg); right: 10px;}
+    55% {bottom: 500px; letter-spacing: 0px; transform: rotate(25deg); right: -10px;}
+    60% {bottom: 550px; letter-spacing: 15px; transform: rotate(-15deg); right: 10px;}
+    65% {bottom: 600px; letter-spacing: -5px; transform: rotate(-25deg); right: -10px;}
+    70% {bottom: 650px; letter-spacing: -15px; transform: rotate(15deg); right: 10px;}
+    75% {bottom: 700px; letter-spacing: 0px; transform: rotate(25deg); right: -10px;}
+    80% {bottom: 750px; letter-spacing: 5px; transform: rotate(-15deg); right: 10px;}
+    85% {bottom: 800px; letter-spacing: 0px; transform: rotate(-25deg); right: -10px;}
+    90% {bottom: 850px; letter-spacing: -5px; transform: rotate(15deg); right: 10px;}
+    95% {bottom: 900px; letter-spacing: 0px; transform: rotate(25deg); right: -10px;}
+    100% {bottom: 950px; letter-spacing: 3px; transform: rotate(-15deg); right: 10px;}
+  }
